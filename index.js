@@ -2,18 +2,18 @@ import Books from './modules/mainContent.js';
 import Date from './modules/date.js';
 import * as module from './modules/selector.js';
 
+const addBook = document.querySelector('#add-new');
+const contact = document.querySelector('#contact');
+const bookList = document.querySelector('#list');
 window.addEventListener('load', Date());
-
-module.contact.addEventListener('click', module.displayContact);
-module.addBook.addEventListener('click', module.addBookToList);
-module.bookList.addEventListener('click', module.onload);
+addBook.addEventListener('click', module.addBookToList);
+contact.addEventListener('click', module.displayContact);
+bookList.addEventListener('click', module.onload);
 
 const form = document.querySelector('#book-form');
 const displayArea = document.querySelector('#book-list');
-
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
-//  eslint-disable-next-line max-len
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -22,7 +22,6 @@ form.addEventListener('submit', (event) => {
     author.setAttribute('placeholder', 'author');
   } else {
     displayArea.innerHTML = '';
-    // const book = new Books();
     Books.storeData();
   }
 });

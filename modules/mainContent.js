@@ -1,7 +1,7 @@
-export const form = document.querySelector('#book-form');
-export const title = document.querySelector('#title');
-export const author = document.querySelector('#author');
-export const displayArea = document.querySelector('#book-list');
+// export const form = document.querySelector('#book-form');
+const title = document.querySelector('#title');
+const author = document.querySelector('#author');
+const displayArea = document.querySelector('#book-list');
 
 export default class Books {
   constructor(title, author) {
@@ -43,7 +43,7 @@ export default class Books {
       const words = document.createElement('div');
       displayTitle.innerText = `"${element.title}" by`;
       displayAuth.innerText = element.author;
-      deleteBtn.innerHTML = `<button class="btn borders removeButton" onclick='deleteItem(${index})'>Remove</button>`;
+      deleteBtn.innerHTML = `<button class="btn borders removeButton" onclick='removeBook (${index})'>Remove</button>`;
       deleteBtn.classList.add('deleteBook');
       container.classList.add('flexing', 'centers');
       words.classList.add('flexing');
@@ -68,10 +68,9 @@ export default class Books {
     this.displayBooks();
   }
 }
-const book = new Books();
-// eslint-disable-next-line no-unused-vars
-const deleteItem = (id) => {
-  book.removeBook(id);
-};
-
-// window.addEventListener('load', bigBook.displayBooks());
+// const bigBook = new Books();
+// // // eslint-disable-next-line no-unused-vars
+// const deleteItem = (id) => {
+//   bigBook.removeBook(id);
+// };
+document.addEventListener('DOMContentLoaded', Books.displayBooks);
