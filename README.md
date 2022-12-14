@@ -45,7 +45,7 @@
 
 Clone this repository to your desired folder:
 
-  git clone https://github.com/hiwina/Capstone-Project-1
+  git clone https://github.com/hiwina/Awesome-Book-ES6
 
 
 <!-- AUTHORS -->
