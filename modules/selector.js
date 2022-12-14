@@ -23,7 +23,7 @@ export const onload = () => {
 export const addBookToList = () => {
   bookList.classList.remove('active');
   contact.classList.remove('active');
-  displayArea.style.display = 'none';
+  contactSection.style.display = 'none';
   addSection.style.display = 'flex';
   addBook.classList.add('active');
   displayArea.style.display = 'none';

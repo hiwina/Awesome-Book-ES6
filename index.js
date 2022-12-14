@@ -11,8 +11,8 @@ module.bookList.addEventListener('click', module.onload);
 const form = document.querySelector('#book-form');
 const displayArea = document.querySelector('#book-list');
 
-export const title = document.querySelector('#title');
-export const author = document.querySelector('#author');
+const title = document.querySelector('#title');
+const author = document.querySelector('#author');
 //  eslint-disable-next-line max-len
 
 form.addEventListener('submit', (event) => {
@@ -22,15 +22,7 @@ form.addEventListener('submit', (event) => {
     author.setAttribute('placeholder', 'author');
   } else {
     displayArea.innerHTML = '';
-    const book = new Books();
-    book.storeData();
+    // const book = new Books();
+    Books.storeData();
   }
 });
-
-const book = new Books();
-// eslint-disable-next-line no-unused-vars
-const deleteItem = (id) => {
-  book.removeBook(id);
-};
-
-// window.addEventListener('load', bigBook.displayBooks());

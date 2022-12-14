@@ -68,3 +68,10 @@ export default class Books {
     this.displayBooks();
   }
 }
+const book = new Books();
+// eslint-disable-next-line no-unused-vars
+const deleteItem = (id) => {
+  book.removeBook(id);
+};
+
+// window.addEventListener('load', bigBook.displayBooks());
