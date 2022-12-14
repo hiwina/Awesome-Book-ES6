@@ -25,3 +25,6 @@ form.addEventListener('submit', (event) => {
     Books.storeData();
   }
 });
+displayArea.addEventListener('click', (e) => {
+  Books.removeBook(e.target);
+});

@@ -1,4 +1,3 @@
-// export const form = document.querySelector('#book-form');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const displayArea = document.querySelector('#book-list');
@@ -43,7 +42,7 @@ export default class Books {
       const words = document.createElement('div');
       displayTitle.innerText = `"${element.title}" by`;
       displayAuth.innerText = element.author;
-      deleteBtn.innerHTML = `<button class="btn borders removeButton" onclick='removeBook (${index})'>Remove</button>`;
+      deleteBtn.innerHTML = `<button class="btn borders removeButton" 'removeBook (${index})'>Remove</button>`;
       deleteBtn.classList.add('deleteBook');
       container.classList.add('flexing', 'centers');
       words.classList.add('flexing');
@@ -68,9 +67,4 @@ export default class Books {
     this.displayBooks();
   }
 }
-// const bigBook = new Books();
-// // // eslint-disable-next-line no-unused-vars
-// const deleteItem = (id) => {
-//   bigBook.removeBook(id);
-// };
 document.addEventListener('DOMContentLoaded', Books.displayBooks);
